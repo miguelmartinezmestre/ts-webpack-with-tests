@@ -1,1 +1,4 @@
-console.log("hola");
+const Suma =(a:number,b:number) => {
+    return a+b;
+}
+export default Suma;

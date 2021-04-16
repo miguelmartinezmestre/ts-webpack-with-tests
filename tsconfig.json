@@ -8,9 +8,10 @@
     "allowJs": true,
     "strict": true,
     "moduleResolution": "Node",
-    "module": "ESNext"
+    "module": "ESNext",
+    "skipLibCheck": true
   },
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules","./node_modules/@types/*"],
   "types": ["node"],
   "include": ["./src/**/*"]
 }
