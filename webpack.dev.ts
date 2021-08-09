@@ -1,6 +1,5 @@
 import {Configuration} from "webpack";
 import path from "path";
-import {CheckerPlugin} from "awesome-typescript-loader";
 
 const config: Configuration = {
   mode: "development",
@@ -16,13 +15,13 @@ const config: Configuration = {
   module: {
     rules: [
       {
-        test: /\.ts$/,
-        loader: "awesome-typescript-loader",
-      },
-    ],
+        test: /\.ts(x)?$/,
+        loader: 'ts-loader',
+        exclude: /node_modules/
+      }
+    ]
   },
   devtool: "source-map",
-  plugins: [new CheckerPlugin()],
 };
 
 module.exports = config;

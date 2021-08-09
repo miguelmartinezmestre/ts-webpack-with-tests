@@ -1,6 +1,5 @@
 import path from "path";
 import {Configuration} from "webpack";
-import {CheckerPlugin} from "awesome-typescript-loader";
 const WebpackObfuscator = require("webpack-obfuscator");
 
 const config: Configuration = {
@@ -15,7 +14,7 @@ const config: Configuration = {
     rules: [
       {
         test: /\.ts$/,
-        loader: "awesome-typescript-loader",
+        loader: "ts-loader",
       },
       {
         test: /\.js$/,
@@ -30,7 +29,6 @@ const config: Configuration = {
     ],
   },
   plugins: [
-    new CheckerPlugin(),
     new WebpackObfuscator({
       rotateStringArray: true,
     }),
